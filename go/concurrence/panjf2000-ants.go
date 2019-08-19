@@ -30,7 +30,8 @@ func main() {
 		}
 	}()
 
-	pool, _ := ants.NewPoolWithFunc(1000, func(payload interface{}) {
+	// 1000 8000 160000
+	pool, _ := ants.NewPoolWithFunc(16000, func(payload interface{}) {
 		request, ok := payload.(*Request)
 		if !ok {
 			return
